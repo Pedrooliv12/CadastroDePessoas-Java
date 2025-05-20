@@ -1,13 +1,13 @@
-package dev.oliveira.CadastroDePessoas;
+package dev.oliveira.DevTask;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CadastroDePessoasApplication {
+public class DevTaskApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CadastroDePessoasApplication.class, args);
+		SpringApplication.run(DevTaskApplication.class, args);
 	}
 
 }

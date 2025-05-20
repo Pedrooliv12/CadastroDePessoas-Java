@@ -1,10 +1,10 @@
-package dev.oliveira.CadastroDePessoas;
+package dev.oliveira.DevTask;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CadastroDePessoasApplicationTests {
+class DevTaskApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.oliveira</groupId>
-	<artifactId>CadastroDePessoas</artifactId>
+	<artifactId>DevTask</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CadastroDePessoas</name>
-	<description>API de cadastros - primeiro projeto com Spring | Java JDK 17</description>
+	<name>DevTask</name>
+	<description>API de cadastro e fluxo de trabalho para developers- primeiro projeto com Spring | Java JDK 17</description>
 	<url/>
 	<licenses>
 		<license/>

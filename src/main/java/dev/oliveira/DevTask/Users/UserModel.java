@@ -1,9 +1,10 @@
-package dev.oliveira.CadastroDePessoas;
+package dev.oliveira.DevTask.Users;
 
+import dev.oliveira.DevTask.Projetos.TaskModel;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tb_cadastro")
+@Table(name = "tb_users")
 public class UserModel {
 
     @Id
@@ -12,13 +13,20 @@ public class UserModel {
     private String nome;
     private String email;
     private int idade;
+    private Boolean status;
+
+    // @ManyToOne - Um dev(user) tem apenas uma task
+    @ManyToOne
+    @JoinColumn(name = "Tasks_id") // Chave estrangeira
+    private TaskModel tasks;
 
     public UserModel() {}
 
-    public UserModel(String nome, String email, int idade) {
+    public UserModel(String nome, String email, int idade, Boolean status) {
         this.nome = nome;
         this.email = email;
         this.idade = idade;
+        this.status = status;
     }
 
     public String getNome() {
@@ -41,8 +49,16 @@ public class UserModel {
         return idade;
     }
 
-    public void setNome(int idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
 
 }
