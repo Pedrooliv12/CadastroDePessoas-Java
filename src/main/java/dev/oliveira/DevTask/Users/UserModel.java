@@ -2,9 +2,15 @@ package dev.oliveira.DevTask.Users;
 
 import dev.oliveira.DevTask.Projetos.TaskModel;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "tb_users")
+@NoArgsConstructor
+@Getter
+@Setter
 public class UserModel {
 
     @Id
@@ -17,47 +23,13 @@ public class UserModel {
 
     // @ManyToOne - Um dev(user) tem apenas uma task
     @ManyToOne
-    @JoinColumn(name = "Tasks_id") // Chave estrangeira
-    private TaskModel tasks;
-
-    public UserModel() {}
+    @JoinColumn(name = "task_id") // Chave estrangeira
+    private TaskModel task;
 
     public UserModel(String nome, String email, int idade, Boolean status) {
         this.nome = nome;
         this.email = email;
         this.idade = idade;
-        this.status = status;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
-    public Boolean getStatus() {
-        return status;
-    }
-
-    public void setStatus(Boolean status) {
         this.status = status;
     }
 
