@@ -61,14 +61,14 @@ public class UserController {
 
     // DELETE
     @DeleteMapping("/{id}")
-    public UserModel deleteUser(@PathVariable Long id) {
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteUser(@PathVariable Long id) {
         log.info("DELETE /users/{}", id);
 
         UserModel user = userRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found"));
 
         userRepository.deleteById(id);
-        return user;
     }
 
 }
