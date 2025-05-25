@@ -1,5 +1,7 @@
 package dev.oliveira.DevTask.Users;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import dev.oliveira.DevTask.Projetos.TaskModel;
 import jakarta.persistence.*;
 import lombok.Getter;

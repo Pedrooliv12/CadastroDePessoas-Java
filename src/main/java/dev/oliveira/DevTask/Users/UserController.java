@@ -21,7 +21,8 @@ public class UserController {
     public UserModel createUser(@RequestBody UserModel user) {
         log.info("POST /users - Body: {}", user);
 
-        user.setStatus(Boolean.FALSE);
+        user.setStatus(false);
+        user.setTask(null);
 
         return userRepository.save(user);
     }
